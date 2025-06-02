@@ -1,0 +1,104 @@
+/* Custom Fonts */
+.font-gmarket-sans { font-family: 'Gmarket Sans', sans-serif; }
+.font-cafe24-ssurround { font-family: 'Cafe24 Ssurround', sans-serif; }
+.font-noto-sans-kr { font-family: 'Noto Sans KR', sans-serif; }
+.font-pretendard { font-family: 'Pretendard', sans-serif; }
+
+/* Custom Colors */
+body { background-color: #F5F5F5; } /* 배경: 연한 그레이 */
+.text-body { color: #333333; } /* 본문: 다크 그레이 */
+.text-highlight-title { color: #001F3F; } /* 강조텍스트/제목: 미드나잇 블루 */
+.bg-accent-mint { background-color: #A0E8D8; } /* 보조 컬러: 민트 */
+.text-accent-mint { color: #A0E8D8; } /* 보조 컬러: 민트 */
+.bg-section-gray { background-color: #E0E0E0; } /* 박스 배경, 구분선: 라이트 그레이 */
+.border-section-gray { border-color: #E0E0E0; }
+
+/* Scroll behavior for smooth scrolling to sections */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Modal styling */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+.modal-content {
+    background-color: #F5F5F5; /* 배경색 통일 */
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.modal-close-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333333; /* 다크 그레이 */
+}
+.modal-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Accordion specific styling */
+.accordion-header {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #A0E8D8; /* 민트 */
+    color: #333333; /* 다크 그레이 */
+    border-radius: 0.75rem;
+    margin-bottom: 0.5rem;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.accordion-header:hover {
+    background-color: #8FD9C8; /* Slightly darker mint on hover */
+}
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    padding: 0 1.5rem; /* Initial padding, will expand */
+    background-color: #F5F5F5; /* 배경색 통일 */
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+}
+.accordion-content.active {
+    max-height: 1000px; /* A large enough value to accommodate content */
+    padding: 1.5rem; /* Expanded padding */
+}
+.accordion-icon {
+    transition: transform 0.3s ease;
+}
+.accordion-icon.rotate {
+    transform: rotate(90deg);
+}
