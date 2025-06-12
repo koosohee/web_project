@@ -1,0 +1,146 @@
+/* 기본 세팅 */
+body, html {
+    margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', sans-serif; background-color: #000; color: #fff;
+  }
+  
+  /* 상단 네비게이션 */
+  .top-nav {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 10;
+  }
+  
+  .top-nav ul {
+    list-style: none;
+    margin: 0; padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .top-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 8px 14px;
+    border-radius: 6px;
+    background-color: rgba(0,0,0,0.5);
+    transition: background-color 0.3s ease;
+  }
+  
+  .top-nav ul li a:hover {
+    background-color: rgba(255,0,0,0.8);
+  }
+  
+  /* 비디오 래퍼 */
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* 비디오 */
+  .video-wrapper video {
+    position: absolute;
+    top: 50%; left: 50%;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    filter: brightness(0.5);
+    z-index: 1;
+  }
+  
+  /* 영상 위 오버레이 텍스트 */
+  .overlay-content {
+    position: relative;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+  
+  .overlay-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  }
+  
+  .overlay-content p {
+    font-size: 1.4rem;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+  }
+  
+  /* 모바일 대응 */
+  @media screen and (max-width: 768px) {
+    /* 네비게이션 세로 정렬, 위치도 살짝 아래로 */
+    .top-nav {
+      top: 10px;
+      right: 10px;
+    }
+  
+    .top-nav ul {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .top-nav ul li a {
+      font-size: 1rem;
+      padding: 6px 10px;
+    }
+  
+    /* 영상 높이 줄이고 */
+    .video-wrapper {
+      height: 60vh;
+    }
+  
+    /* 글씨 작게 */
+    .overlay-content h1 {
+      font-size: 1.8rem;
+    }
+  
+    .overlay-content p {
+      font-size: 1rem;
+    }
+    .video-wrapper video {
+      object-fit: contain;
+      width: 100%;
+      height: auto;
+      min-height: unset;
+      top: 0;
+      left: 0;
+      transform: none;
+    }
+      .video-wrapper {
+        position: relative;
+        width: 100%;
+        height: auto; /* 영상 높이에 맞게 자동 조절 */
+        overflow: hidden;
+      }
+    
+      .video-wrapper video {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        position: static;
+        transform: none;
+        min-height: auto;
+      }
+    
+      .overlay-content {
+        position: relative;
+        z-index: 2;
+        transform: none;
+        padding: 20px 10px;
+        top: auto;
+        text-align: center;
+      }
+    }
+  
+  
+  

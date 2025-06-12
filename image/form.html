@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>장면 공유 폼</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+<body>
+  <header>
+    <h1>INFORMATION</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">home</a>
+    <a href="learn.html">learn</a>
+    <a href="form.html" class="active">share</a>
+  </nav>
+
+  <section id="share-form">
+    <h2>당신만의 장면을 공유해주세요</h2>
+    <form>
+      <label for="nickname">닉네임:</label>
+      <input type="text" id="nickname" name="nickname" required><br><br>
+
+      <label for="scene-image">사진 첨부:</label>
+      <input type="file" id="scene-image" name="scene-image" accept="image/*"><br><br>
+
+      <label for="scene-type">장면 유형 선택:</label>
+      <select id="scene-type" name="scene-type" required>
+        <option value="cut">컷</option>
+        <option value="shot">샷</option>
+        <option value="angle">앵글</option>
+      </select><br><br>
+
+      <label for="scene-name">장면 이름:</label>
+      <input type="text" id="scene-name" name="scene-name" required><br><br>
+
+      <label for="description">장면 설명:</label><br>
+      <textarea id="description" name="description" rows="5" cols="50" required></textarea><br><br>
+
+      <button type="submit">제출</button>
+    </form>
+  </section>
+</body>
+</html>
