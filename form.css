@@ -1,0 +1,149 @@
+/* 기본 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111;
+  color: #eee;
+  font-family: 'Segoe UI', 'Noto Sans KR', sans-serif;
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+
+/* 헤더 */
+header h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #ff4444;
+}
+
+/* 네비게이션 */
+nav {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px 0;
+  margin-bottom: 40px;
+}
+
+nav a {
+  color: #ddd;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+nav a.active,
+nav a:hover {
+  background-color: #ff4444;
+  color: white;
+}
+
+/* 섹션 제목 */
+#share-form h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #ff4444;
+}
+
+/* 폼 스타일 */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #222;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 68, 68, 0.5);
+}
+
+/* 라벨 스타일 */
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #eee;
+  font-size: 1.1rem;
+}
+
+/* 인풋, 셀렉트, 텍스트에어리어 스타일 */
+input[type="text"],
+input[type="file"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 25px;
+  border: none;
+  border-radius: 8px;
+  background-color: #333;
+  color: #eee;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: background-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus,
+select:focus,
+textarea:focus {
+  background-color: #444;
+  outline: none;
+}
+
+/* 버튼 스타일 */
+button[type="submit"] {
+  width: 100%;
+  background-color: #ff4444;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 15px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(255, 68, 68, 0.6);
+}
+
+button[type="submit"]:hover {
+  background-color: #e03e3e;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  body {
+    padding: 20px 15px;
+  }
+
+  form {
+    padding: 25px 20px;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  input[type="text"],
+  input[type="file"],
+  select,
+  textarea {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+
+  button[type="submit"] {
+    font-size: 1.1rem;
+    padding: 13px 0;
+  }
+}
